@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Week 1 TypeScript</title>
+  <meta name="description" content="Week 1">
+  <meta name="author" content="Andy Unbehend">
+
+
+</head>
+
+<body>
+  <p id="elements"> </p>
+  <script>"use strict";
+    class Grocery {
+        constructor(name, quantity, brand) {
+            this.name = name;
+            this.quantity = quantity;
+            this.brand = brand;
+        }
+    }
+    let milk = new Grocery('milk', 3, 'kirkland');
+    let bread = new Grocery('bread', 7, 'Wonder');
+    let eggs = new Grocery('eggs', 3, 'Eggland');
+    let groceryList = [milk, eggs, bread];
+    groceryList.forEach((element, index, array) => {
+        document.getElementById("elements").innerHTML= JSON.stringify(groceryList); 
+    }); </script>
+</body>
+</html>
